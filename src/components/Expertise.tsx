@@ -1,90 +1,92 @@
 import React from "react";
 import '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faReact, faDocker, faPython } from '@fortawesome/free-brands-svg-icons';
+import { faPython, faDocker } from '@fortawesome/free-brands-svg-icons';
+import { faBrain } from '@fortawesome/free-solid-svg-icons';
 import Chip from '@mui/material/Chip';
 import '../assets/styles/Expertise.scss';
 
-const labelsFirst = [
-    "React",
-    "TypeScript",
-    "JavaScript",
-    "HTML5",
-    "CSS3",
-    "SASS",
-    "Flask",
+const mlLabels = [
+    "PyTorch",
+    "ONNX",
+    "Scikit-learn",
+    "XGBoost",
+    "NVIDIA Triton",
+    "OpenVINO",
+    "Hailo",
+    "Computer Vision",
+    "VLMs",
+];
+
+const backendLabels = [
+    "FastAPI",
+    "RabbitMQ",
+    "MongoDB",
+    "Redis",
+    "Lucene",
+    "Solr",
+    "DuckDB",
+    "Apache Parquet",
+    "ClickHouse",
+    "MySQL",
+];
+
+const dataLabels = [
     "Python",
     "SQL",
-    "PostgreSQL",
-    "Postman"
-];
-
-const labelsSecond = [
-    "Git",
-    "GitHub Actions",
-    "Docker",
-    "AWS",
-    "Azure",
-    "Linux",
-    "Snowflake",
+    "R",
     "Pandas",
-    "Selenium",
-];
-
-const labelsThird = [
-    "OpenAI",
-    "Groq",
-    "LangChain",
-    "Qdrant",
-    "Hugging Face",
-    "LlamaIndex",
-    "Streamlit",
+    "NumPy",
+    "Matplotlib",
+    "Plotly",
+    "Seaborn",
+    "Docker",
 ];
 
 function Expertise() {
     return (
-    <div className="container" id="expertise">
-        <div className="skills-container">
-            <h1>Expertise</h1>
-            <div className="skills-grid">
-                <div className="skill">
-                    <FontAwesomeIcon icon={faReact} size="3x"/>
-                    <h3>Full Stack Web Development</h3>
-                    <p>I have built a diverse array of web applications from scratch using modern technologies such as React and Flask. I have a strong proficiency in the SDLC process and frontend + backend development.</p>
-                    <div className="flex-chips">
-                        <span className="chip-title">Tech stack:</span>
-                        {labelsFirst.map((label, index) => (
-                            <Chip key={index} className='chip' label={label} />
-                        ))}
+        <div className="container" id="expertise">
+            <div className="skills-container">
+                <h1>Expertise</h1>
+                <div className="skills-grid">
+                    <div className="skill">
+                        <FontAwesomeIcon icon={faBrain} size="3x" />
+                        <h3>Machine Learning & Computer Vision</h3>
+                        <p>I build and deploy computer vision and multimodal AI systems at scale — from training and quantizing models for embedded/edge platforms to serving them on NVIDIA Triton with dynamic model management and performance benchmarking.</p>
+                        <div className="flex-chips">
+                            <span className="chip-title">Tech stack:</span>
+                            {mlLabels.map((label, index) => (
+                                <Chip key={index} className='chip' label={label} />
+                            ))}
+                        </div>
                     </div>
-                </div>
 
-                <div className="skill">
-                    <FontAwesomeIcon icon={faDocker} size="3x"/>
-                    <h3>DevOps & Automation</h3>
-                    <p>Once the application is built, I help clients set up DevOps testing, CI/CD pipelines, and deployment automation to support the successful Go-Live.</p>
-                    <div className="flex-chips">
-                        <span className="chip-title">Tech stack:</span>
-                        {labelsSecond.map((label, index) => (
-                            <Chip key={index} className='chip' label={label} />
-                        ))}
+                    <div className="skill">
+                        <FontAwesomeIcon icon={faDocker} size="3x" />
+                        <h3>Backend & Data Engineering</h3>
+                        <p>I design backend platforms and data pipelines that power large-scale annotation, search, and analytics workflows — including FastAPI services, RabbitMQ messaging, ETL into Parquet, and full-text/vector search over millions of records.</p>
+                        <div className="flex-chips">
+                            <span className="chip-title">Tech stack:</span>
+                            {backendLabels.map((label, index) => (
+                                <Chip key={index} className='chip' label={label} />
+                            ))}
+                        </div>
                     </div>
-                </div>
 
-                <div className="skill">
-                    <FontAwesomeIcon icon={faPython} size="3x"/>
-                    <h3>GenAI & LLM</h3>
-                    <p>Stay relevant in the market by leveraging the latest AI models in your projects. I have professional experience building enterprise grade GenAI-enabled solutions to empower intelligent decision making.</p>
-                    <div className="flex-chips">
-                        <span className="chip-title">Tech stack:</span>
-                        {labelsThird.map((label, index) => (
-                            <Chip key={index} className='chip' label={label} />
-                        ))}
+                    <div className="skill">
+                        <FontAwesomeIcon icon={faPython} size="3x" />
+                        <h3>Data Analysis & Full Stack</h3>
+                        <p>I build internal tools and full-stack web applications that make data accessible — from interactive dashboards and dataset explorers to optimization-driven applications using techniques like MILP and ensemble modeling.</p>
+                        <div className="flex-chips">
+                            <span className="chip-title">Tech stack:</span>
+                            {dataLabels.map((label, index) => (
+                                <Chip key={index} className='chip' label={label} />
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
     );
 }
 

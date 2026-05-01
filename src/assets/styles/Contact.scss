@@ -4,45 +4,23 @@
   margin-right: 5px;
 }
 
-.contact-form {
-  padding-top: 20px;
-
-  button {
-    float: right;
-    background-color: white;
-    color: #050f0b;
-  }
-
-  button:hover {
-    background-color: #5000ca;
-    color: white;
-  }
-
-  fieldset {
-    background-color: white;
-  }
-}
-
-label {
-  font-size: 1.2rem;
-  font-family: 'DomaineDispNar-Medium', sans-serif;
-}
-
-.form-flex {
+.contact-info {
   display: flex;
-  gap: 15px;
-  padding-bottom: 15px;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 24px;
+  align-items: flex-start;
 }
 
-.form-flex .MuiFormControl-root {
-  width: 100%;
-}
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.1rem;
+  color: inherit;
+  text-decoration: none;
 
-form {
-  width: 100% !important;
-}
-
-.body-form {
-  width: 100% !important;
-  margin-bottom: 15px !important;
+  &:hover {
+    color: #5000ca;
+  }
 }
