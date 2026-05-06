@@ -1,5 +1,5 @@
 import React from "react";
-import '../assets/styles/Project.scss';
+import '../assets/styles/Projects.scss';
 
 const placeholderStyle: React.CSSProperties = {
     width: '100%',
@@ -37,7 +37,7 @@ function Project() {
                 </div>
             </div>
 
-            <h1 style={{ marginTop: '4rem' }}>Publications</h1>
+            {/* <h1 style={{ marginTop: '4rem' }}>Publications</h1>
             <div className="projects-grid">
                 <div className="project">
                     <a href="https://ieeexplore.ieee.org/document/9843287" target="_blank" rel="noreferrer">
@@ -45,7 +45,7 @@ function Project() {
                     </a>
                     <p>Co-authored peer-reviewed IEEE paper (2022). Built an ensemble pricing model combining Random Forest and Ridge Regression, integrating mobile location data to improve real-estate price prediction accuracy.</p>
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 }

@@ -4,9 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBriefcase, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import '../assets/styles/Timeline.scss'
+import '../assets/styles/CareerTimeline.scss'
 
-function Timeline() {
+function CareerTimeline() {
   return (
     <div id="history">
       <div className="items-container">
@@ -74,4 +74,4 @@ function Timeline() {
   );
 }
 
-export default Timeline;
+export default CareerTimeline;

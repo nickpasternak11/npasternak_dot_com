@@ -24,3 +24,15 @@
     color: #5000ca;
   }
 }
+
+.dark-mode {
+
+  .contact-info,
+  .contact-link {
+    color: #fff;
+  }
+
+  .contact-link:hover {
+    color: #b388ff;
+  }
+}
