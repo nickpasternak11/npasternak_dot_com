@@ -33,7 +33,7 @@ function Project() {
                         <div className="zoom" style={placeholderStyle}>March Madness</div>
                     </a>
                     <a href="https://github.com/nickpasternak11/march_madness" target="_blank" rel="noreferrer"><h2>March Madness Bracket Predictor</h2></a>
-                    <p>Machine learning model and bracket simulator for the NCAA Division I Men's Basketball Tournament.</p>
+                    <p>Monte Carlo bracket simulator for the NCAA Division I Men's Basketball Tournament.</p>
                 </div>
             </div>
 

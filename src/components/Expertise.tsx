@@ -1,46 +1,41 @@
 import React from "react";
 import '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPython, faDocker } from '@fortawesome/free-brands-svg-icons';
-import { faBrain } from '@fortawesome/free-solid-svg-icons';
+import { faBrain, faDatabase, faChartLine } from '@fortawesome/free-solid-svg-icons';
 import Chip from '@mui/material/Chip';
 import '../assets/styles/Expertise.scss';
 
 const mlLabels = [
     "PyTorch",
-    "ONNX",
-    "Scikit-learn",
-    "XGBoost",
+    "vLLM",
     "NVIDIA Triton",
+    "ONNX",
     "OpenVINO",
     "Hailo",
-    "Computer Vision",
-    "VLMs",
+    "XGBoost",
+    "Scikit-learn",
 ];
 
-const backendLabels = [
+const infraLabels = [
     "FastAPI",
     "RabbitMQ",
+    "Docker",
     "MongoDB",
     "Redis",
-    "Lucene",
-    "Solr",
     "DuckDB",
     "Apache Parquet",
-    "ClickHouse",
-    "MySQL",
+    "Lucene",
 ];
 
-const dataLabels = [
+const analyticsLabels = [
     "Python",
     "SQL",
-    "R",
+    "MILP",
     "Pandas",
     "NumPy",
-    "Matplotlib",
     "Plotly",
-    "Seaborn",
-    "Docker",
+    "Matplotlib",
+    "R",
 ];
 
 function Expertise() {
@@ -48,11 +43,12 @@ function Expertise() {
         <div className="container" id="expertise">
             <div className="skills-container">
                 <h1>Expertise</h1>
+
                 <div className="skills-grid">
                     <div className="skill">
                         <FontAwesomeIcon icon={faBrain} size="3x" />
                         <h3>Machine Learning & Computer Vision</h3>
-                        <p>I build and deploy computer vision and multimodal AI systems at scale — from training and quantizing models for embedded/edge platforms to serving them on NVIDIA Triton with dynamic model management and performance benchmarking.</p>
+                        <p>I build and deploy high-throughput computer vision and multimodal systems. I specialize in model quantization and optimization for edge hardware (Hailo/OpenVINO) and scalable cloud serving via NVIDIA Triton and vLLM.</p>
                         <div className="flex-chips">
                             <span className="chip-title">Tech stack:</span>
                             {mlLabels.map((label, index) => (
@@ -62,24 +58,24 @@ function Expertise() {
                     </div>
 
                     <div className="skill">
-                        <FontAwesomeIcon icon={faDocker} size="3x" />
-                        <h3>Backend & Data Engineering</h3>
-                        <p>I design backend platforms and data pipelines that power large-scale annotation, search, and analytics workflows — including FastAPI services, RabbitMQ messaging, ETL into Parquet, and full-text/vector search over millions of records.</p>
+                        <FontAwesomeIcon icon={faDatabase} size="3x" />
+                        <h3>Data Systems & Infrastructure</h3>
+                        <p>I design backend platforms and data pipelines that power large-scale annotation and analytics workflows—including FastAPI services, RabbitMQ messaging, and full-text/vector search over millions of records.</p>
                         <div className="flex-chips">
                             <span className="chip-title">Tech stack:</span>
-                            {backendLabels.map((label, index) => (
+                            {infraLabels.map((label, index) => (
                                 <Chip key={index} className='chip' label={label} />
                             ))}
                         </div>
                     </div>
 
                     <div className="skill">
-                        <FontAwesomeIcon icon={faPython} size="3x" />
-                        <h3>Data Analysis & Full Stack</h3>
-                        <p>I build internal tools and full-stack web applications that make data accessible — from interactive dashboards and dataset explorers to optimization-driven applications using techniques like MILP and ensemble modeling.</p>
+                        <FontAwesomeIcon icon={faChartLine} size="3x" />
+                        <h3>Analytics & Optimization</h3>
+                        <p>I build internal tools and applications that make data actionable—from interactive dashboards to optimization-driven systems using techniques like Mixed-Integer Linear Programming (MILP) and ensemble modeling.</p>
                         <div className="flex-chips">
                             <span className="chip-title">Tech stack:</span>
-                            {dataLabels.map((label, index) => (
+                            {analyticsLabels.map((label, index) => (
                                 <Chip key={index} className='chip' label={label} />
                             ))}
                         </div>
