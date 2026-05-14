@@ -11,10 +11,10 @@ function Project() {
 
                 {/* Project 1 */}
                 <div className="project">
-                    <a href="https://github.com/nickpasternak11/dfs_lineup_optimizer" target="_blank" rel="noreferrer">
+                    <a href="https://github.com/nickpasternak11/dfs_lineup_optimizer#dfs-lineup-optimizer" target="_blank" rel="noreferrer">
                         <img src={draftkings_dfs} className="zoom" alt="DFS Lineup Optimizer" />
                     </a>
-                    <a href="https://github.com/nickpasternak11/dfs_lineup_optimizer" target="_blank" rel="noreferrer">
+                    <a href="https://github.com/nickpasternak11/dfs_lineup_optimizer#dfs-lineup-optimizer" target="_blank" rel="noreferrer">
                         <h2>NFL Fantasy Football Lineup Optimizer</h2>
                     </a>
                     <p>Full-stack web application for building optimal DraftKings Daily Fantasy lineups by maximizing projected points within salary and positional constraints.</p>
