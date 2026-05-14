@@ -6,6 +6,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
+import FileDownloadIcon from '@mui/icons-material/FileDownload';
 import IconButton from '@mui/material/IconButton';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import List from '@mui/material/List';
@@ -15,6 +16,7 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
+import ResumeFile from '../assets/NPasternakResume.docx';
 
 const drawerWidth = 240;
 const navItems = [['Expertise', 'expertise'], ['Career', 'career'], ['Projects', 'projects'], ['Contact', 'contact']];
@@ -92,12 +94,20 @@ function Navigation({ parentToChild, modeChange }: any) {
           ) : (
             <DarkModeIcon onClick={() => modeChange()} />
           )}
-          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+          <Box sx={{ display: { xs: 'none', sm: 'flex' }, alignItems: 'center' }}>
             {navItems.map((item) => (
               <Button key={item[0]} onClick={() => scrollToSection(item[1])} sx={{ color: '#fff' }}>
                 {item[0]}
               </Button>
             ))}
+            <Button
+              href={ResumeFile}
+              download="Nick_Pasternak_Resume.docx"
+              startIcon={<FileDownloadIcon />}
+              sx={{ color: '#fff' }}
+            >
+              Download CV
+            </Button>
           </Box>
         </Toolbar>
       </AppBar>
