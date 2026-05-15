@@ -22,10 +22,10 @@ function Project() {
 
                 {/* Project 2 */}
                 <div className="project">
-                    <a href="https://github.com/nickpasternak11/march_madness" target="_blank" rel="noreferrer">
+                    <a href="https://github.com/nickpasternak11/march_madness/tree/main#march-madness-tournament-simulator" target="_blank" rel="noreferrer">
                         <img src={march_madness} className="zoom" alt="March Madness Simulator" />
                     </a>
-                    <a href="https://github.com/nickpasternak11/march_madness" target="_blank" rel="noreferrer">
+                    <a href="https://github.com/nickpasternak11/march_madness/tree/main#march-madness-tournament-simulator" target="_blank" rel="noreferrer">
                         <h2>March Madness Bracket Simulator</h2>
                     </a>
                     <p>Monte Carlo bracket simulator for the NCAA Division I Men's Basketball Tournament utilizing ensemble modeling and historical seed performance data.</p>
